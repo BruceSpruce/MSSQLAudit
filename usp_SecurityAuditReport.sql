@@ -375,7 +375,7 @@ AS
 		Set @SendEmail = 1;
 	END -- IF (@AuditChanges > 0) 
 
-	IF (@SendEmail = 1 OR @email_rec = '')
+	IF (@SendEmail = 1 AND @email_rec <> '')
 	BEGIN
 		SET @Body = @Body + '</body>';
 		
